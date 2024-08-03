@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - Vuejs do jeito ninja!</title>
+    <style media="screen">
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <!-- <img :src="'https://www.valuecoders.com/blog/wp-content/uploads/2021/06/Vue.js-Use-Cases-1-1024x343.jpg'"
+            :alt="'Vuejs is awesome!'" title="" id=""
+            :data-img-large="'https://www.valuecoders.com/blog/wp-content/uploads/2021/06/Vue.js-Use-Cases-1-1024x343.jpg'"> -->
+        <p :class="classhtml">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia pariatur explicabo
+            exercitationem, modi sed
+            aliquam suscipit quo doloribus quis non tempore atque repellendus consequuntur aspernatur harum. Impedit
+            minima qui repudiandae.</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Vuejs do jeito ninja!",
+                classhtml: "red",
+            }
+        });
+    </script>
+</body>
+
+</html>
