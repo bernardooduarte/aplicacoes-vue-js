@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Vuejs do jeito ninja!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+
+            beforeCreate() {
+                console.log('beforeCreate');
+                console.log('titulo', this.titulo);
+                console.log('el', this.$el);
+            },
+            created() {
+                console.log('created');
+                console.log('titulo', this.titulo);
+                console.log('el', this.$el);
+            },
+            beforeMount() {
+                console.log('beforeMount');
+                console.log('titulo', this.titulo);
+                console.log('el', this.$el);
+            },
+            mounted(){
+                console.log('mounted');
+                console.log('titulo', this.titulo);
+                console.log('el', this.$el);
+            },
+            beforeUpdate() {
+                console.log('beforeUpdate');
+            },
+            updated() {
+                console.log('updated');
+            },
+
+            data: {
+                titulo: "Vuejs do jeito ninja!",
+            }
+    });
+    </script>
+</body>
+
+</html>
